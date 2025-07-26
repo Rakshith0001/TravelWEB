@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TravelWEB</title>
+  <link rel="stylesheet" href="css/normalize.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index1.html">TravelWEB</a></div>
+    <input id="menu-toggle" type="checkbox"/>
+    <label class="menu-icon" for="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <nav>
+      <a href="index1.html">Home</a>
+      <a href="index2.html">Destinations</a>
+      <a href="index1.html#blog">Blog</a>
+      <a href="index1.html#contact">Contact</a>
+    </nav>
+  </header>
+  <section id="contact" class="contact-box">
+    <h2>Trip Booking</h2>
+    <div class="contact-form">
+      <form>
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="Your name...." required/>
+
+        <label for="gmail">Gmail</label>
+        <input id="gmail" type="Email" placeholder="your gmail...." required/>
+
+        <label for="date">Date</label>
+        <input id="date" type="date" placeholder="Enter...." required/>
+
+        <label for="region">Region</label>
+        <select id="region">
+            <option value="1">Select</option>
+            <option value="2">Gujarat</option>
+            <option value="3">Maharastra</option>
+            <option value="4">Karnataka</option>
+            <option value="5">Kerala</option>
+            <option value="6">Tamilnadu</option>
+        </select>
+
+        <label for="place">Plcae</label>
+        <input id="place" type="text" placeholder="Place name...." required/>
+
+        <label for="suggetion">Suggetion</label>
+        <textarea id="suggetion" cols="30" rows="10" placeholder="Your message here...." required></textarea>
+
+        <label for="upload">Upload Documents</label>
+        <input id="upload" type="file" accept=".png, .jpeg, .pdf" required/>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </section>  
+  </body>
+  </html>
+  

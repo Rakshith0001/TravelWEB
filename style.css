@@ -1,0 +1,361 @@
+:root {
+  --primary: #0066a2;
+  --secondary: #f0ffff;
+  --semi: #044e7c;
+  --white: #fff;
+  --dark: #333;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  color: var(--dark);
+  background: #f9f9f9;
+}
+
+/* Header Section */
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: var(--secondary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.1rem 1.5rem;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.logo, a {
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 2rem;
+  color: var(--dark);
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--dark);
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+/* Mobile menu toggle */
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  height: 2px;
+  width: 25px;
+  background: var(--dark);
+  margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background: var(--secondary);
+    position: absolute;
+    top: 57px; /* Matches header height */
+    right: 0;
+    width: 200px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+  }
+
+  #menu-toggle:checked + .menu-icon + nav {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+}
+
+/* Hero Section */
+.hero {
+  background: url('../images/banner.jpg') center/cover no-repeat;
+  min-height: 50vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero-text{
+  color: var(--white);
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  max-width: 800px;
+}
+.hero-text h1{
+  margin-top: 0.2rem;
+  margin-bottom: 00.2rem;
+}
+.hero button{
+  background: var(--primary);
+  border: none;
+  padding: 1rem 2rem;
+  margin-top: 0.5rem;
+  border-radius: 25px;
+  color: var(--white);
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.hero button:hover{
+  background: var(--semi);
+}
+
+/* Search bar */
+.search-bar{
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+.search-bar input{
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 25px 0 0 25px;
+  outline: none;
+  width: 50%;
+  max-width: 400px;
+}
+.search-bar button{
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: 0 25px 25px 0;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.search-bar button:hover{
+  background: var(--semi);
+}
+
+/* Tags */
+.tags{
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.tag a{
+  background: var(--primary);
+  color: var(--white);
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: normal;
+}
+.tag a:hover{
+  background: var(--semi);
+}
+
+ /* Top catogaries section */
+.top-cat h2{
+  text-align: center;
+  padding: 0.5rem 0 1.5rem;
+}
+.cat-card{
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.card{
+  position: relative;
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow:0 2px 5px rgba(0,0,0,0.5) ;
+  max-width: 10rem;
+  height: 13rem;
+  transition: transform 0.3s ease;
+}
+.card img{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.card .desc{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--white);
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+.card:hover{
+  transform: scale(1.05);
+}
+
+ /* Blogs section */
+ .blog h2{
+   text-align: center;
+   padding: 0.5rem 0 1.5rem;
+ }
+ .blog{
+   max-width: 800px;
+   margin: 0 auto;
+   padding: 1rem;
+   scroll-margin-top: 50px;
+ }
+ .blog-card{
+   background: var(--secondary);
+   border-radius: 20px;
+   padding: 1rem;
+   box-shadow: 0 2px 7px rgba(0, 0, 0, 0.5);
+   margin-bottom: 1rem;
+   transition: transform 0.3s ease;
+ }
+ .blog-card h4 {
+   color: var(--primary);
+ }
+ .blog-card p a{
+   text-decoration: none;
+   font-weight: bold;
+   font-size: 1rem;
+   color: var(--primary);
+ }
+.blog-card:hover{
+  transform: scale(1.01);
+}
+
+/* Contact us section */
+.contact-box h2{
+  text-align: center;
+  padding: 1rem 0 1.5rem;
+}
+.contact-box{
+  scroll-margin-top: 50px; /* adjust this value to your header height */
+}
+.contact-form{
+  max-width: 400px;
+  background: var(--secondary);
+  margin: 1rem auto;
+  margin-top: 0;
+  border-radius: 20px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgb(0,0,0,0.1);
+}
+.contact-form form{
+  display: flex;
+  flex-direction: column;
+  
+}
+.contact-form label{
+  margin: 0.5rem 0 0.2rem;
+  font-weight: bold;
+}
+.contact-form input, 
+.contact-form textarea,
+select{
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  border-radius: 8px;
+  outline-color: var(--primary);
+}
+.contact-form button{
+  margin-top: 1rem;
+  border: none;
+  border-radius: 25px;
+  padding: 0.5rem;
+  background: var(--primary);
+  color: var(--white);
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.contact-form button:hover{
+  background: var(--semi);
+}
+footer{
+  background: #333;
+  text-align: center;
+  padding: 1rem 3rem ;
+  color: var(--white);
+}
+
+/*dastination page*/
+.destinations h2{
+  text-align: center;
+  padding: 1rem 1.5rem;
+}
+.destinations{
+  scroll-margin-top: 50px; /* adjust this value to your header height */
+}
+.dest-card-container{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 0 0 1rem 0;
+}
+.dest-card{
+  width: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: var(--white);
+  transition: transform 0.3s;
+}
+
+.dest-card img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+.dest-card-content{
+  padding: 1rem;
+}
+
+.read-more-btn {
+  background: var(--primary);
+  color: var(--white);
+  border-radius: 25px;
+  padding: 0 1rem;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 1rem;
+  text-align: center;
+}
+.btn-align{
+  text-align: center;
+}
+.read-more-btn:hover{
+  background: var(--semi);
+}
