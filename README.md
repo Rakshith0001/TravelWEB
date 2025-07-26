@@ -11,20 +11,20 @@ A responsive travel website showcasing beautiful destinations, trip booking, tra
 ---
 
 ## 🚀 Project Structure
-- TravelWEB/
-|
-|--index
-TravelWEB/
-│
-├── index1.html # Home page
-├── index2.html # Destinations page
-├── index3.html # Trip booking page
-├── css/
-│ ├── normalize.css
-│ └── style.css
-├── images/
-│ ├── banner.jpg
-│ ├── [other images...]
+<p>TravelWEB/<br>
+|<br>
+|--index<br>
+TravelWEB/<br>
+│<br>
+├── index1.html # Home page<br>
+├── index2.html # Destinations page<br>
+├── index3.html # Trip booking page<br>
+├── css/<br>
+│ ├── normalize.css<br>
+│ └── style.css<br>
+├── images/<br>
+│ ├── banner.jpg<br>
+│ ├── [other images...]<p><br>
 ---
 
 
