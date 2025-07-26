@@ -11,7 +11,7 @@ A responsive travel website showcasing beautiful destinations, trip booking, tra
 ---
 
 ## 🚀 Project Structure
-TravelWEB/
+- TravelWEB/
 |
 |--index
 TravelWEB/
