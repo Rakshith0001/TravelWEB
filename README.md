@@ -12,6 +12,9 @@ A responsive travel website showcasing beautiful destinations, trip booking, tra
 
 ## 🚀 Project Structure
 TravelWEB/
+|
+|--index
+TravelWEB/
 │
 ├── index1.html # Home page
 ├── index2.html # Destinations page
